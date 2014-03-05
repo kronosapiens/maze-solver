@@ -5,7 +5,7 @@ languages: ruby
 
 # Objective
 
-Implement a Breadth First Search algorithm to solve a maze programmatically. 
+Implement a Breadth First Search algorithm to solve a maze programmatically. There is also a [tutorial](https://github.com/flatiron-school-students/maze-solver-ruby-004/tree/tutorial) version. I'll be pushing up a solution shortly.
 
 # Introduction
 
