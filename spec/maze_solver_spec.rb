@@ -75,7 +75,7 @@ describe 'MazeSolver' do
         # We're using nodes that absolutely must be traveled to in order to confirm a solution path, 
         # as mazes might include more than one solution.
         solution_must_contain = [[0, 3], [7, 5], [7, 6], [7, 7], [8, 7], [9, 7], [10,7]]
-        # binding.pry
+
         solution_must_contain.each do |node|
           expect(maze_solver.solution_path).to include(node)
         end
