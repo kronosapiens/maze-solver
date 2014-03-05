@@ -1,11 +1,8 @@
-require 'pry'
-
 class MazeSolver
 
   attr_accessor :solution_path, :maze_array, :maze
 
   def initialize(maze)
-    @solution_path = []
     @maze = maze
     @maze_array = to_a
   end
@@ -20,8 +17,7 @@ class MazeSolver
   end
 
   def solve
-    solution_path = search([3, 0], [])
-    @solution_path = solution_path.collect {|coord| coord.reverse}
+    @solution_path = search([3, 0], []).collect {|coord| coord.reverse}
   end
 
   def search(current, history)
