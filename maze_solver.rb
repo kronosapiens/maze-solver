@@ -35,20 +35,26 @@ class MazeSolver
      [current[0], current[1]+1] => maze_array[current[0]][current[1]+1],
      [current[0]+1, current[1]] => maze_array[current[0]+1][current[1]],
      [current[0], current[1]-1] => maze_array[current[0]][current[1]-1]
-     }.reject {|k, v| history.include?(k) || v == "#" || v == "."}
+     }.reject {|k, v| history.include?(k) || v == "#"}
    end
 
    def valid_path?(path_array)
     path_array[-1] == [7, 10]
   end
 
+  # def to_a
+  #   master_arr = []
+  #   arr = maze.split('').reject { |el| el == "\n" }
+  #   arr.each_slice(17) { |sub_arr| master_arr << sub_arr }
+  #   master_arr.collect do |arr|
+  #     arr.slice(6, 17)
+  #   end
+  # end
+
+  #Avi's method:
+
   def to_a
-    master_arr = []
-    arr = maze.split('').reject { |el| el == "\n" }
-    arr.each_slice(17) { |sub_arr| master_arr << sub_arr }
-    master_arr.collect do |arr|
-      arr.slice(6, 17)
-    end
+    @maze.split(/\n/).map {|row| row.strip.chars}
   end
 
 end
