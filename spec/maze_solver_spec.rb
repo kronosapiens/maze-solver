@@ -24,12 +24,6 @@ describe 'MazeSolver' do
     it "instantiates with the maze as an attribute" do   
       expect(maze_solver.maze).to eq(small_maze)
     end
-
-    xit 'instantiates with empty arrays for traveled_path, visited_set, node_queue' do
-      expect(maze_solver.traveled_path).to eq([])
-      expect(maze_solver.visited_nodes).to eq([])
-      expect(maze_solver.node_queue).to eq([])  
-    end
   end
 
   context 'Parsing a maze' do
@@ -57,14 +51,6 @@ describe 'MazeSolver' do
 
   context 'Solving a maze' do
     describe '#solve' do
-      xit 'visits nodes and keeps track of them in the visited_nodes array' do
-        maze_solver.solve
-
-        # We're going to assume that at least 0,3 and 1,3 will be moved through
-        # in an at all functioning solve routine.
-        expect(maze_solver.visited_nodes).to include([0,3])
-        expect(maze_solver.visited_nodes).to include([1,3])
-      end
     end
 
     describe '#solution_path' do
